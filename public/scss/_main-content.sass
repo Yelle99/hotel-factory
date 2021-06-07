@@ -1,0 +1,136 @@
+.main-intro
+    margin-top: 60px   
+    display: flex
+    gap: 40px
+
+    .main-heading
+        width: 680px
+
+        h1
+            +main-headings
+
+        p
+            font-family: Arial
+            font-style: normal
+            font-weight: bold
+            font-size: 20px
+            line-height: 23px
+            color: $text-color
+            padding-top: 10px
+
+        .btn
+            +button
+
+    .main-text
+        width: 674px
+
+        p
+            font-family: Arial
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 23px
+            color: $text-color
+
+        h3
+            color: $text-color
+            font-family: Arial
+            font-style: normal
+            font-weight: bold
+            font-size: 20px
+            line-height: 25px
+            margin: 22px 0 1px 0
+
+
+.best-apartments
+    margin-top: 61px
+
+    h1
+        +main-headings
+
+    .apartments-list
+        display: flex
+        flex-wrap: wrap
+        gap: 40px
+
+        .best-apartment
+            margin-top: 30px
+            position: relative
+
+            .best-apartment--image
+                width: 321px
+                height: 233px
+
+            .best-apartment--text
+                height: 118px
+                background-color: #F2F2F2
+                padding-left: 10px
+                margin-top: -5px
+
+                h3   
+                    font-family: Arial
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 20px
+                    line-height: 25px
+                    color: $text-color
+                    padding-top: 30px
+
+                span
+                    +view-details
+
+                .best-apartment--price
+                    position: absolute
+                    bottom: 60px
+                    right: 10px
+                    font-family: Arial
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 30px
+                    line-height: 31px
+                    color: $text-color
+
+
+
+.service
+    margin-top: 60px
+    position: relative
+
+    .ornament-background
+        max-width: 70%
+        height: 355px
+
+    .service-text
+        width: 674px
+        color: white
+        position: absolute
+        top: 44px
+        left: 9%
+
+        h1
+            font-family: Playfair Display
+            font-style: normal
+            font-weight: bold
+            font-size: 42px
+            line-height: 56px
+            letter-spacing: 2px
+            padding-bottom: 10px
+
+        h3     
+            font-family: Arial
+            font-style: normal
+            font-weight: bold
+            font-size: 20px
+            line-height: 23px
+            padding-bottom: 30px
+
+        p
+            font-family: Arial
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 23px
+            padding-bottom: 31px
+
+        span
+            +view-details

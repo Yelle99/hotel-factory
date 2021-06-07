@@ -2,6 +2,7 @@
   width: 100%
   height: 919px
   background-image: url(../../images/hero-image.png)
+  overflow: hidden
 
   .hero-text 
     width: 100%
@@ -29,21 +30,8 @@
             line-height: 23px
             color: #ffffff
 
-        button
-            cursor: pointer
-            margin-top: 30px
-            border: none
-            color: #ffffff
-            background-color: $gold
-            font-family: Arial
-            font-style: normal
-            font-weight: bold
-            font-size: 16px
-            line-height: 23px
-            border-radius: 30px
-            padding: 18px 36px
-            letter-spacing: 2px
-            text-transform: uppercase
+        .btn
+            +button
             
     .social-media
         position: absolute
@@ -68,7 +56,52 @@
             cursor: pointer
 
 
+.hero-slider
+    position: absolute
+    top: -450px
+    left: 600px
 
-.room-image
-    width: 441px
-    height: 233px
+    .slider-room--image
+        width: 441px
+        height: 233px
+
+    .slider-room--text
+        background-color: white
+        width: 441px
+        height: 118px
+        padding-left: 30px
+        position: relative
+        
+        h3   
+            font-family: Arial
+            font-style: normal
+            font-weight: bold
+            font-size: 20px
+            line-height: 25px
+            color: $text-color
+            padding-top: 30px
+
+        span
+            +view-details
+
+        .slider-room--price
+            position: absolute
+            bottom: 43px
+            right: 30px
+            font-family: Arial
+            font-style: normal
+            font-weight: bold
+            font-size: 30px
+            line-height: 31px
+            color: $text-color
+
+    .prev-arrow
+        position: absolute
+        top: 160px
+        left: -50px
+        cursor: pointer
+
+    .slick-next
+        display: none !important
+
+

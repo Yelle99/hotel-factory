@@ -57,5 +57,3 @@ $emitter->emit($response);
 // $loader = new FilesystemLoader($layoutDir);
 // $twig = new Environment($loader);
 // echo $twig->render('main_layout.html.twig', ['sobe' => $json_data]);
-// //, ['name' => 'John Doe', 
-// //    'occupation' => 'gardener']);

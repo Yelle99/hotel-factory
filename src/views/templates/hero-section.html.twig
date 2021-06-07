@@ -1,16 +1,50 @@
-<div class = "hero-section">
-    <section class = "hero-text">
-        <div class = "container">
-            <div class = "heading">
-                <h1>Feel like home, but better.</h1>
-                <p>World-famous. Deeply relaxing.</p>
-                <button>Learn more</button>
+<head>
+    <link rel="stylesheet" type="text/css" href="/slick/slick/slick.css"/>
+</head>
+
+<body>
+    <div class = "hero-section">
+        <section class = "hero-text">
+            <div class = "container">
+                <div class = "heading">
+                    <h1>Feel like home, but better.</h1>
+                    <p>World-famous. Deeply relaxing.</p>
+                    <button class = "btn">Learn more</button>
+                </div>
+                <div class = "social-media">
+                    <span>Follow us</span>
+                    <img class="social-icon" src="../../images/facebook.svg">
+                    <img class="social-icon" src="../../images/instagram.svg">
+                </div>
             </div>
-            <div class = "social-media">
-                <span>Follow us</span>
-                <img class="social-icon" src="../../images/facebook.svg">
-                <img class="social-icon" src="../../images/instagram.svg">
-            </div>
+        </section> 
+
+        <div class="hero-slider">
+            {%for product in products%}
+                <div class="slider-room">
+                    <img class = "slider-room--image" src = '{{product.images[0].url}}'/>
+                    <div class = "slider-room--text">
+                        <h3>{{ product.title }}</h3>
+                        <span>View details <img class='details-arrow' src='../../images/details-arrow.svg'></span>
+                        <p class = "slider-room--price">{{ product.formatted_price }}</p>
+                    </div>
+                </div>
+            {%endfor%}
         </div>
-    </section> 
-</div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/slick/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('.hero-slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: "<img class='prev-arrow' src='../../images/prev-arrow.svg'>"
+        });
+    });
+    </script>
+</body>

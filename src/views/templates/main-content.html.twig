@@ -1,0 +1,39 @@
+<div class = "container">
+    <div class = "main-intro">
+        <div class = "main-heading">
+            <h1>Comfort & Design to relax in Luxury Hotel</h1>
+            <p>Every day is a new day for relaxation.</p>
+            <button class = "btn">About us</button>
+        </div>
+        <div class = "main-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis gravida metus quis varius. Nullam sit amet fringilla velit, non pretium nibh. Etiam condimentum diam sapien, a hendrerit est pellentesque. Etiam condimentum diam sapien, a hendrerit est pellentesque. Etiam condimentum diam sapien, a hendrerit est pellentesque.</p>
+            <h3>John Johnson</h3>
+            <p>General manager</p>
+        </div>
+    </div>
+    <div class = "best-apartments">
+        <h1>Best Apartments</h1> 
+        <div class = "apartments-list">
+            {%for product in products%}
+                <div class="best-apartment">
+                    <img class = "best-apartment--image" src = '{{product.images[0].url}}'/>
+                    <div class = "best-apartment--text">
+                        <h3>{{ product.title }}</h3>
+                        <span>View details <img class='details-arrow' src='../../images/details-arrow.svg'></span>
+                        <p class = "best-apartment--price">{{ product.formatted_price }}</p>
+                    </div>
+                </div>
+            {%endfor%} 
+        </div>             
+    </div>
+</div>
+
+<div class = "service">
+    <img class="ornament-background" src="../../images/dark-ornament.png">
+        <div class = "service-text">
+            <h1>Excellent service</h1>
+            <h3>Every day is a new day for relaxation.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis gravida metus quis varius. Nullam sit amet fringilla velit, non pretium nibh. Etiam condimentum diam sapien, a hendrerit est pellentesque. Etiam condimentum diam sapien, a hendrerit est pellentesque. Etiam condimentum diam sapien, a hendrerit est pellentesque.</p>
+            <span>View more <img class='details-arrow' src='../../images/details-arrow.svg'></span>
+        </div>   
+</div>

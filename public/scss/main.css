@@ -10,6 +10,11 @@
   margin: 0 auto;
 }
 
+.smaller-container {
+  width: 1260px;
+  margin: 0 auto;
+}
+
 .primary-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,6 +137,7 @@
   width: 100%;
   height: 919px;
   background-image: url(../../images/hero-image.png);
+  overflow: hidden;
 }
 
 .hero-section .hero-text {
@@ -164,7 +170,7 @@
   color: #ffffff;
 }
 
-.hero-section .hero-text .heading button {
+.hero-section .hero-text .heading .btn {
   cursor: pointer;
   margin-top: 30px;
   border: none;
@@ -179,6 +185,8 @@
   padding: 18px 36px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  -webkit-box-shadow: 0px 5px 10px rgba(56, 59, 55, 0.2);
+          box-shadow: 0px 5px 10px rgba(56, 59, 55, 0.2);
 }
 
 .hero-section .hero-text .social-media {
@@ -210,8 +218,280 @@
   cursor: pointer;
 }
 
-.room-image {
+.hero-slider {
+  position: absolute;
+  top: -450px;
+  left: 600px;
+}
+
+.hero-slider .slider-room--image {
   width: 441px;
   height: 233px;
+}
+
+.hero-slider .slider-room--text {
+  background-color: white;
+  width: 441px;
+  height: 118px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.hero-slider .slider-room--text h3 {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  color: #383b37;
+  padding-top: 30px;
+}
+
+.hero-slider .slider-room--text span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  cursor: pointer;
+  gap: 19px;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 23px;
+  color: #9b6333;
+}
+
+.hero-slider .slider-room--text .slider-room--price {
+  position: absolute;
+  bottom: 43px;
+  right: 30px;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 31px;
+  color: #383b37;
+}
+
+.hero-slider .prev-arrow {
+  position: absolute;
+  top: 160px;
+  left: -50px;
+  cursor: pointer;
+}
+
+.hero-slider .slick-next {
+  display: none !important;
+}
+
+.main-intro {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+
+.main-intro .main-heading {
+  width: 680px;
+}
+
+.main-intro .main-heading h1 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 56px;
+  letter-spacing: 2px;
+}
+
+.main-intro .main-heading p {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #383b37;
+  padding-top: 10px;
+}
+
+.main-intro .main-heading .btn {
+  cursor: pointer;
+  margin-top: 30px;
+  border: none;
+  color: #ffffff;
+  background-color: #9b6333;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 23px;
+  border-radius: 30px;
+  padding: 18px 36px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 5px 10px rgba(56, 59, 55, 0.2);
+          box-shadow: 0px 5px 10px rgba(56, 59, 55, 0.2);
+}
+
+.main-intro .main-text {
+  width: 674px;
+}
+
+.main-intro .main-text p {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  color: #383b37;
+}
+
+.main-intro .main-text h3 {
+  color: #383b37;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 22px 0 1px 0;
+}
+
+.best-apartments {
+  margin-top: 61px;
+}
+
+.best-apartments h1 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 56px;
+  letter-spacing: 2px;
+}
+
+.best-apartments .apartments-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
+}
+
+.best-apartments .apartments-list .best-apartment {
+  margin-top: 30px;
+  position: relative;
+}
+
+.best-apartments .apartments-list .best-apartment .best-apartment--image {
+  width: 321px;
+  height: 233px;
+}
+
+.best-apartments .apartments-list .best-apartment .best-apartment--text {
+  height: 118px;
+  background-color: #F2F2F2;
+  padding-left: 10px;
+  margin-top: -5px;
+}
+
+.best-apartments .apartments-list .best-apartment .best-apartment--text h3 {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  color: #383b37;
+  padding-top: 30px;
+}
+
+.best-apartments .apartments-list .best-apartment .best-apartment--text span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  cursor: pointer;
+  gap: 19px;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 23px;
+  color: #9b6333;
+}
+
+.best-apartments .apartments-list .best-apartment .best-apartment--text .best-apartment--price {
+  position: absolute;
+  bottom: 60px;
+  right: 10px;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 31px;
+  color: #383b37;
+}
+
+.service {
+  margin-top: 60px;
+  position: relative;
+}
+
+.service .ornament-background {
+  max-width: 70%;
+  height: 355px;
+}
+
+.service .service-text {
+  width: 674px;
+  color: white;
+  position: absolute;
+  top: 44px;
+  left: 9%;
+}
+
+.service .service-text h1 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 56px;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+
+.service .service-text h3 {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  padding-bottom: 30px;
+}
+
+.service .service-text p {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  padding-bottom: 31px;
+}
+
+.service .service-text span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  cursor: pointer;
+  gap: 19px;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 23px;
+  color: #9b6333;
 }
 /*# sourceMappingURL=main.css.map */
