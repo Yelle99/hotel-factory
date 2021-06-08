@@ -1,39 +1,107 @@
-<div class = "container">
-    <div class = "main-intro">
-        <div class = "main-heading">
-            <h1>Comfort & Design to relax in Luxury Hotel</h1>
-            <p>Every day is a new day for relaxation.</p>
-            <button class = "btn">About us</button>
-        </div>
-        <div class = "main-text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis gravida metus quis varius. Nullam sit amet fringilla velit, non pretium nibh. Etiam condimentum diam sapien, a hendrerit est pellentesque. Etiam condimentum diam sapien, a hendrerit est pellentesque. Etiam condimentum diam sapien, a hendrerit est pellentesque.</p>
-            <h3>John Johnson</h3>
-            <p>General manager</p>
-        </div>
-    </div>
-    <div class = "best-apartments">
-        <h1>Best Apartments</h1> 
-        <div class = "apartments-list">
-            {%for product in products%}
-                <div class="best-apartment">
-                    <img class = "best-apartment--image" src = '{{product.images[0].url}}'/>
-                    <div class = "best-apartment--text">
-                        <h3>{{ product.title }}</h3>
-                        <span>View details <img class='details-arrow' src='../../images/details-arrow.svg'></span>
-                        <p class = "best-apartment--price">{{ product.formatted_price }}</p>
-                    </div>
-                </div>
-            {%endfor%} 
-        </div>             
-    </div>
-</div>
+<head>
 
-<div class = "service">
-    <img class="ornament-background" src="../../images/dark-ornament.png">
-        <div class = "service-text">
-            <h1>Excellent service</h1>
-            <h3>Every day is a new day for relaxation.</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis gravida metus quis varius. Nullam sit amet fringilla velit, non pretium nibh. Etiam condimentum diam sapien, a hendrerit est pellentesque. Etiam condimentum diam sapien, a hendrerit est pellentesque. Etiam condimentum diam sapien, a hendrerit est pellentesque.</p>
-            <span>View more <img class='details-arrow' src='../../images/details-arrow.svg'></span>
-        </div>   
-</div>
+</head>
+
+<body>
+    <div class = "container">
+        <section class = "main-intro">
+            <div class = "main-heading">
+                <h1>Comfort & Design to relax in Luxury Hotel</h1>
+                <p>Every day is a new day for relaxation.</p>
+                <button class = "btn">About us</button>
+            </div>
+            <div class = "main-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis gravida metus quis varius. Nullam sit amet fringilla velit, non pretium nibh. Etiam condimentum diam sapien, a hendrerit est pellentesque. Etiam condimentum diam sapien, a hendrerit est pellentesque. Etiam condimentum diam sapien, a hendrerit est pellentesque.</p>
+                <h3>John Johnson</h3>
+                <p>General manager</p>
+            </div>
+        </section>
+        <section class = "best-apartments">
+            <h1>Best Apartments</h1> 
+            <div class = "apartments-list">
+                {%for product in products%}
+                    <div class="best-apartment">
+                        <img class = "best-apartment--image" src = '{{product.images[0].url}}'/>
+                        <div class = "best-apartment--text">
+                            <h3>{{ product.title }}</h3>
+                            <span>View details <img class='details-arrow' src='../../images/details-arrow.svg'></span>
+                            <p class = "best-apartment--price">{{ product.formatted_price }}</p>
+                        </div>
+                    </div>
+                {%endfor%} 
+            </div>             
+        </section>
+    </div>
+
+    <section class = "service">
+        <div class = "excellent-service">
+            <img class="ornament-background" src="../../images/dark-ornament.png">
+            <div class = "service-text">
+                <h1>Excellent service</h1>
+                <h3>Every day is a new day for relaxation.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis gravida metus quis varius. Nullam sit amet fringilla velit, non pretium nibh. Etiam condimentum diam sapien, a hendrerit est pellentesque. Etiam condimentum diam sapien, a hendrerit est pellentesque. Etiam condimentum diam sapien, a hendrerit est pellentesque.</p>
+                <span>View more <img class='details-arrow' src='../../images/details-arrow.svg'></span>
+            </div>
+
+            <section class = "services">
+                <article>
+                    <img class="bed" src="../../images/bed.svg">
+                    <div class = "service-benefits">
+                        <h2 class = "service-heading">Orthopedic beds</h2>
+                        <hr>
+                        <p class = "service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ispum.</p>
+                    </div>
+                </article>
+                <article>
+                    <img class="waiter" src="../../images/waiter.svg">
+                    <div class = "service-benefits">
+                        <h2 class = "service-heading">Extraordinary cousine</h2>
+                        <hr>
+                        <p class = "service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis gravida.</p>
+                    </div>
+                </article>
+                <article>
+                    <img class="coffee" src="../../images/coffee.svg">
+                    <div class = "service-benefits">
+                        <h2 class = "service-heading">Custom coffee</h2>
+                        <hr>
+                        <p class = "service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <img class="maid" src="../../images/maid.png">   
+    </section>
+
+    <section class = "news">
+        <h1>Recent news</h1>
+        <div class = "news-slider">
+            {%for singleNews in news%}
+                <div class = "single-news">
+                    <img class = "news-slider--image" src = '{{singleNews.image}}'/>
+                    <p class = "category">{{singleNews.category}}</p>
+                    <h3 class = "title">{{singleNews.title}}</h3>
+                    <p class = "description">{{singleNews.description}}</p>
+                    <span>Learn more <img class='details-arrow' src='../../images/details-arrow.svg'></span>
+                </div>
+            {%endfor%}
+        </div>
+    </section>
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/slick/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('.news-slider').slick({
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            prevArrow: "<img class='prev-arrow--news' src='../../images/prev-arrow-news.svg'>",
+            nextArrow: "<img class='next-arrow--news' src='../../images/next-arrow-news.svg'>"
+        });
+    });
+    </script>
+</body>

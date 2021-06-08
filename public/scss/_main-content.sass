@@ -95,16 +95,18 @@
 .service
     margin-top: 60px
     position: relative
+    display: flex
 
     .ornament-background
-        max-width: 70%
+        width: 100%
         height: 355px
+        padding-bottom: 24px
 
     .service-text
         width: 674px
         color: white
         position: absolute
-        top: 44px
+        top: 34px
         left: 9%
 
         h1
@@ -134,3 +136,109 @@
 
         span
             +view-details
+
+    .maid
+        width: 40%
+        height: auto
+
+    .services
+        display: flex
+        gap: 39px
+        padding-left: 13%
+
+        .service-benefits
+            width: 254px
+            height: 135px
+            background-color: #f0ece7
+            padding: 11px 0 0 15px
+            margin-top: 16px
+
+            .service-heading
+                font-family: Arial
+                font-style: normal
+                font-weight: bold
+                font-size: 20px
+                line-height: 25px
+                color: $text-color
+                padding-bottom: 6px
+
+            hr
+                width: 100px
+                border: 1px solid $gold
+
+            .service-description
+                font-family: Arial
+                font-style: normal
+                font-weight: normal
+                font-size: 16px
+                line-height: 23px
+                padding-top: 4px
+
+.news 
+    padding-top: 60px
+    width: 1260px
+    margin: 0 auto
+
+    h1
+        +main-headings
+        padding-bottom: 30px
+
+    .news-slider
+        position: relative
+
+        .slick-slide 
+            margin: 0 20px
+           
+        .prev-arrow--news
+            position: absolute
+            left: -70px
+            top: 225px
+            cursor: pointer
+        
+        .next-arrow--news
+            position: absolute
+            top: 225px
+            right: -70px
+            cursor: pointer
+
+        .single-news
+            width: 559px
+            height: 502px
+            background-color: white
+            box-shadow: 0px 15px 15px rgba(56, 59, 55, 0.3)
+
+            .news-slider--image
+                width: 100%
+                height: 270px
+                padding-bottom: 13px
+
+            span
+                +view-details
+                padding-left: 19px
+
+            .category
+                font-family: Arial
+                font-style: normal
+                font-weight: bold
+                font-size: 16px
+                line-height: 23px
+                color: #B2B2B2
+                padding: 0 0 10px 19px
+
+            .title
+                font-family: Arial
+                font-style: normal
+                font-weight: bold
+                font-size: 20px
+                line-height: 25px
+                padding: 0 0 10px 19px
+                color: $text-color
+
+            .description
+                font-family: Arial
+                font-style: normal
+                font-weight: normal
+                font-size: 16px
+                line-height: 23px
+                color: $text-color
+                padding: 0 0 31px 19px
