@@ -33,18 +33,5 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="/slick/slick/slick.min.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function(){
-        $('.hero-slider').slick({
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            prevArrow: "<img class='prev-arrow' src='../../images/prev-arrow.svg'>"
-        });
-    });
-    </script>
+    {% include "/slick-scripts.html.twig" %}
 </body>

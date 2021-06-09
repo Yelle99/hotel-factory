@@ -1,0 +1,111 @@
+.news 
+    padding-top: 60px
+    width: 1260px
+    margin: 0 auto
+
+    h1
+        +main-headings
+        padding-bottom: 30px
+
+    .news-slider
+        position: relative
+
+        .slick-list
+            height: 520px
+
+        .slick-slide 
+            margin: 0 20px
+           
+        .prev-arrow--news
+            position: absolute
+            left: -70px
+            top: 225px
+            cursor: pointer
+        
+        .next-arrow--news
+            position: absolute
+            top: 225px
+            right: -70px
+            cursor: pointer
+
+        .single-news
+            width: 559px
+            height: 502px
+            background-color: white
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25)
+            position: relative
+
+            .promo-price
+                display: flex
+                background-color: $gold
+                width: 183px
+                height: 59px
+                position: absolute
+                left: 0
+                top: 31px
+                padding: 7px 18px 
+                color: white
+
+                img
+                    height: 30px
+                    margin-top: 8px
+                    margin-right: 17px
+
+                h4
+                    font-family: Playfair Display
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 16px
+                    line-height: 23px
+
+                p
+                    font-family: Arial
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 12px
+                    line-height: 23px
+
+            .news-slider--image
+                width: 100%
+                height: 270px
+                padding-bottom: 13px
+
+            span
+                +view-details
+                padding-left: 19px
+
+            .category
+                font-family: Arial
+                font-style: normal
+                font-weight: bold
+                font-size: 16px
+                line-height: 23px
+                color: #B2B2B2
+                padding: 0 0 10px 19px
+
+            .title
+                font-family: Arial
+                font-style: normal
+                font-weight: bold
+                font-size: 20px
+                line-height: 25px
+                padding: 0 0 10px 19px
+                color: $text-color
+
+            .description
+                font-family: Arial
+                font-style: normal
+                font-weight: normal
+                font-size: 16px
+                line-height: 23px
+                color: $text-color
+                padding: 0 0 31px 19px
+
+.beige-bg
+    position: absolute
+    width: 100%
+    height: 683px
+    left: 0px
+    top: 3139px
+    background: #F0ECE7
+    z-index: -1

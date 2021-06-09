@@ -1,0 +1,51 @@
+.best-apartments
+    margin-top: 61px
+
+    h1
+        +main-headings
+
+    a
+        text-decoration: none
+        color: $gold
+
+    .apartments-list
+        display: flex
+        flex-wrap: wrap
+        gap: 40px
+
+        .best-apartment
+            margin-top: 30px
+            position: relative
+
+            .best-apartment--image
+                width: 321px
+                height: 233px
+
+            .best-apartment--text
+                height: 118px
+                background-color: #F2F2F2
+                padding-left: 10px
+                margin-top: -5px
+
+                h3   
+                    font-family: Arial
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 20px
+                    line-height: 25px
+                    color: $text-color
+                    padding-top: 30px
+
+                span
+                    +view-details
+
+                .best-apartment--price
+                    position: absolute
+                    bottom: 60px
+                    right: 10px
+                    font-family: Arial
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 30px
+                    line-height: 31px
+                    color: $text-color
