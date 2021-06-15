@@ -1,3 +1,29 @@
-<section class = "reviews">
+<section class = "guest-reviews">
     <h1>Guest reviews</h1>
+    <div class = "reviews">
+        {% for review in reviews %}
+            <article class = "review">
+                <div class = "review-heading">
+                    <img class = "review-img" src = {{ review.user.profile_image }}/>
+                    <div class = "username">
+                        <h3>{{ review.user.name }}</h3>
+                        <p>Career name</p>
+                    </div>
+                    <span class = "rating">
+                        {% if review.rating %}
+                            {% for i in 1..review.rating %}
+                                <img src="../../images/full-star.svg">
+                            {% endfor %}
+                            {% if review.rating < 5 %}
+                                {% for i in 1.. (5 - review.rating) %}
+                                    <img src="../../images/empty-star.svg">
+                                {% endfor %}
+                            {% endif %}
+                        {% endif %}
+                    </span>
+                </div>
+                <p class = "review-text">{{ review.comment }}</p>
+            </article>
+        {% endfor %}
+    </div>    
 </section>

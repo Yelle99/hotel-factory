@@ -1,14 +1,76 @@
 <!-- TWIG product page -->
 <!-- https://twig.symfony.com/doc/3.x/ -->
 <head>
-<title>Hotel</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="/scss/main.css" />
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <title>Hotel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
-{% include "/header.html.twig" %}
-{{product.title}}
+<body>
+    {% include "/header-product.html.twig" %}
 
+    <div class = "product-container">
+        <div class = "slider-for">
+            <img class = "product-image" src = '{{product.images[0].url}}'/>
+            <img class = "product-image" src = '{{product.images[1].url}}'/>
+            <img class = "product-image" src = '{{product.images[2].url}}'/>
+            <img class = "product-image" src = '{{product.images[3].url}}'/>
+            <img class = "product-image" src = '{{product.images[2].url}}'/>
+        </div>
+
+        <div class = "slider-nav">
+            <img class = "product-image--nav" src = '{{product.images[0].url}}'/>
+            <img class = "product-image--nav" src = '{{product.images[1].url}}'/>
+            <img class = "product-image--nav" src = '{{product.images[2].url}}'/>
+            <img class = "product-image--nav" src = '{{product.images[3].url}}'/>
+            <img class = "product-image--nav" src = '{{product.images[2].url}}'/>
+        </div>
+
+        <section class = "product-content">
+            <div class = "main-content">
+                {% include "/product-description.html.twig" %}
+            </div>
+
+            <div class = "side-content">
+                {% include "/side-content.html.twig" %}
+
+                {% set reservedDates = [] %}
+
+                {% for dates in product.reserved_dates %}    
+                    {% set reservedDates = reservedDates|merge([dates.date]) %}
+                {% endfor %}
+            </div>
+        </section>
+
+        {% include "/comments.html.twig" %}
+    </div>
+
+    {% include "/footer.html.twig" %}
+
+
+    {% include "/slick-scripts.html.twig" %}
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="/js/flatpickr.js"></script>
+
+    <script>
+
+        let datesArray = {{ reservedDates|json_encode|raw }};
+
+        $("#calendarFrom").flatpickr( {
+            dateFormat: "Y-m-d",
+            disable: datesArray
+        });
+
+        $("#calendarTo").flatpickr( {
+            dateFormat: "Y-m-d",
+            disable: datesArray
+        });
+
+    </script>
+</body>

@@ -1,0 +1,54 @@
+.product-container
+    +product-container
+    overflow: hidden
+
+    .product-image
+        width: 1160px
+        height: 500px
+        object-fit: cover
+        margin-bottom: 30px
+
+    .product-image--nav
+        width: 260px !important
+        height: 164px  
+        object-fit: cover
+        margin: 0 15px
+
+    .slider-nav
+        position: relative
+
+        // .slick-slide
+        //     margin: 0 15px
+
+        .prev-arrow--news
+            width: 7.5px
+            height: 12px
+            cursor: pointer
+            position: absolute
+            left: 0px
+            top: 80px
+            z-index: 999
+        
+        .next-arrow--news
+            width: 7.5px
+            height: 12px
+            cursor: pointer
+            position: absolute
+            right: 0px
+            top: 80px
+            z-index: 999
+
+        .slick-current
+            border: 3px solid $gold
+
+    .product-content
+        display: flex
+        gap: 41px
+
+        .main-content
+            width: 678px
+
+        .side-content
+            width: 437px
+
+        

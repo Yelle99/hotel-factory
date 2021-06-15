@@ -16,18 +16,20 @@
             </ul>         
         </div>
      </nav>
-     <nav class = "secondary-nav">
-        <div class = "container">
-            <h1 class = "logo">Hotel</h1>
-            <ul class = "secondary-nav-links">
-                <li>Home</li>
-                <li>About</li>
-                <li>Rooms</li>
-                <li>Services</li>
-                <li>Blog</li>
-                <li>Contact</li>
-            </ul>         
-        </div>
-     </nav>
+     {% block nav %}
+        <nav class = "secondary-nav">
+            <div class = "container">
+                <h1 class = "logo">Hotel</h1>
+                <ul class = "secondary-nav-links">
+                    <li><a href = "/">Home</a></li>
+                    <li>About</li>
+                    <li>Rooms</li>
+                    <li>Services</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                </ul>         
+            </div>
+        </nav>
+    {% endblock %}
 </header>
 

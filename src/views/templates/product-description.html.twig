@@ -1,0 +1,120 @@
+<section class = "product-description">
+    <h1>{{ product.title }}</h1>
+    <article class = "room-info">
+        <span class ="info">
+            <img src="../../images/person.svg">
+            {{ product.max_adults }} adults
+        </span>
+        <span class ="info">
+            <img src="../../images/baby.svg">
+            {% if product.max_children == 1 %}
+                {{ product.max_children }} child
+            {% else %}
+                {{ product.max_children }} children
+            {% endif %}
+        </span>
+        <span class ="info">
+            <img src="../../images/dimensions.svg">
+            {{ product.squares }} m2
+        </span>
+    </article>
+    <hr/>
+    <p class = "info-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque mattis gravida metus quis varius. Nullam sit amet fringilla velit, non pretium nibh. Etiam condimentum diam sapien, a hendrerit est pellentesque. 
+        Etiam condimentum diam sapien, a hendrerit est pellentesque. Etiam condimentum diam sapien, a hendrerit est pellentesque.
+    </p>
+    <hr/>
+    <article class = "room-services">
+        <h3>Room services</h3>
+            <div class = "services-list">
+                {% if product.services[0].accessories == true %}
+                    <div class = "single-service accessories">
+                        <img class = "icon" src="../../images/check.svg"> <p>accessories</p>
+                    </div>
+                {% else %}
+                    <div class = "single-service accessories">
+                        <img class = "icon" src="../../images/x.svg"> <p>accessories</p>
+                    </div>
+                {% endif %}
+
+                {% if product.services[1].bar == true %}
+                    <div class = "single-service bar">
+                        <img class = "icon" src="../../images/check.svg"> <p>bar 24 hours</p>
+                    </div>
+                {% else %}
+                    <div class = "single-service bar">
+                        <img class = "icon" src="../../images/x.svg"> <p>bar 24 hours</p>
+                    </div>
+                {% endif %}
+
+                {% if product.services[2].cleaning == true %}
+                    <div class = "single-service cleaning">
+                        <img class = "icon" src="../../images/check.svg"> <p>cleaning Service</p>
+                    </div>
+                {% else %}
+                    <div class = "single-service cleaning">
+                        <img class = "icon" src="../../images/x.svg"> <p>cleaning Service</p>
+                    </div>
+                {% endif %}
+
+                {% if product.services[3].phone == true %}
+                    <div class = "single-service">
+                        <img class = "icon" src="../../images/check.svg"> <p>phone</p>
+                    </div>
+                {% else %}
+                    <div class = "single-service">
+                        <img class = "icon" src="../../images/x.svg"> <p>phone</p>
+                    </div>
+                {% endif %}
+
+                {% if product.services[4].restaurant == true %}
+                    <div class = "single-service restaurant">
+                        <img class = "icon" src="../../images/check.svg"> <p>restaurant</p>
+                    </div>
+                {% else %}
+                    <div class = "single-service restaurant">
+                        <img class = "icon" src="../../images/x.svg"> <p>restaurant</p>
+                    </div>
+                {% endif %}
+
+                {% if product.services[5].spa_zone == true %}
+                    <div class = "single-service spa">
+                        <img class = "icon" src="../../images/check.svg"> <p>spa zone</p>
+                    </div>
+                {% else %}
+                    <div class = "single-service spa">
+                        <img class = "icon" src="../../images/x.svg"> <p>spa zone</p>
+                    </div>
+                {% endif %}
+
+                {% if product.services[6].transport == true %}
+                    <div class = "single-service transport">
+                        <img class = "icon" src="../../images/check.svg"> <p>transport</p>
+                    </div>
+                {% else %}
+                    <div class = "single-service transport">
+                        <img class = "icon" src="../../images/x.svg"> <p>transport</p>
+                    </div>
+                {% endif %}
+
+                {% if product.services[7].wifi == true %}
+                    <div class = "single-service">
+                        <img class = "icon" src="../../images/check.svg"> <p>wifi</p>
+                    </div>
+                {% else %}
+                    <div class = "single-service">
+                        <img class = "icon" src="../../images/x.svg"> <p>wifi</p>
+                    </div>
+                {% endif %}
+            </div>
+    </article>
+
+    <article class = "hotel-rules">
+        <h3>Hotel rules</h3>
+        <ul>
+            {% for rule in product.hotel_rules %}
+                <li>- {{ rule }}</li>
+            {% endfor %}
+        </ul>
+    </article>  
+</section>

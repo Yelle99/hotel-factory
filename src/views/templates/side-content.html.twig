@@ -1,0 +1,29 @@
+<aside class = "booking">
+    <h1>Start booking</h1>
+    <p>{{ product.formatted_price }}</p>
+    <h2>Dates</h2>
+    <div class = "date-pickers">
+        <div class = "pick-date">
+            <span class = "calendar-img"><img src="../../images/calendar.svg"></span>
+            <input id="calendarFrom" placeholder = "From Date"/>
+        </div>
+        <div class = "pick-date">
+            <span class = "calendar-img"><img src="../../images/calendar.svg"></span>
+            <input id="calendarTo" placeholder = "To Date"/>
+        </div>
+    </div>
+    <h2>Guests</h2>
+    <div class = "guest-pickers">
+        <div class = "pick-guests">
+            <span class = "guest-img"><img src="../../images/person.svg"></span>
+            <span class = "guest-type">Adult</span>
+            <input type = "number" placeholder = "1"/>
+        </div>
+        <div class = "pick-guests">
+            <span class = "guest-img"><img src="../../images/baby.svg"></span>
+            <span class = "guest-type">Children</span>
+            <input type = "number" placeholder = "1"/>
+        </div>
+    </div>
+    <button>check availability</button>
+</aside>

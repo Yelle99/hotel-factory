@@ -1,5 +1,108 @@
-.reviews
+.guest-reviews
     +smaller-container
 
     h1
         +main-headings
+        margin-bottom: 36px
+
+    .reviews
+        position: relative
+        
+    .slick-slider
+        width: 1160px
+
+        .prev-arrow--news
+            position: absolute
+            left: -50px
+            top: 105px
+            cursor: pointer
+
+        .next-arrow--news
+            position: absolute
+            right: -50px
+            top: 105px
+            cursor: pointer
+
+        .slick-slide 
+            margin: 0 25px
+
+        .review
+            width: 530px !important
+
+            .review-heading
+                width: 440px
+                height: 80px
+                background: #F0ECE7
+                border-radius: 50px
+                display: flex
+                color: $text-color
+                position: relative
+                margin-bottom: 20px
+
+                .review-img
+                    width: 80px
+                    height: 80px
+                    border-radius: 96.5px
+                    object-fit: cover
+
+                h3
+                    font-family: Arial
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 20px
+                    line-height: 25px
+                    padding: 15px 23px 1px 10px
+
+                p
+                    font-family: Arial
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 16px
+                    line-height: 23px
+                    padding-left: 10px
+
+                .rating
+                    display: flex
+                    position: absolute
+                    top: 28px
+                    right: 30px
+
+            .review-text
+                font-family: Arial
+                font-style: normal
+                font-weight: normal
+                font-size: 16px
+                line-height: 23px
+                display: inline-block
+                width: 437px
+                margin-left: 120px
+
+
+.slick-dots   
+	display: flex
+	justify-content: center
+	margin: 0
+	padding: 1rem 0	
+	list-style-type: none
+    margin-top: 10px
+	
+	li 
+		margin: 0 0.25rem
+			
+	button 
+		display: block
+		width: 1rem
+		height: 1rem
+		padding: 0
+		border: none
+		border-radius: 100%
+		background-color: $gold
+		text-indent: -9999px
+		
+	li.slick-active button 
+		background-color: $text-color
+		
+	
+
+
+                
