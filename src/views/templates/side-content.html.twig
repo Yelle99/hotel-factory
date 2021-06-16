@@ -27,3 +27,27 @@
     </div>
     <button>check availability</button>
 </aside>
+
+<aside class = "recommendations">
+    <h1>You may also like</h1>
+        <div class = "recommended-apts">
+            {% set randomNum = random(0, 3) %}
+            <div class = "apartment">
+                <img class = "apt-img" src = "{{products[randomNum].images[0].url}}"/>
+                <div class = "apt-text">
+                    <h3>{{ products[randomNum].title }}</h3>
+                    <span><a href = "/room/{{products[randomNum].slug}}">Book now</a><img class='details-arrow' src='../../images/details-arrow.svg'></span>
+                    <p class = "apt-price">{{ products[randomNum].formatted_price }}</p>
+                </div>
+            </div>
+            {% set randomNum = random(4, 7) %}
+            <div class = "apartment">
+                <img class = "apt-img" src = "{{products[randomNum].images[0].url}}"/>
+                <div class = "apt-text">
+                    <h3>{{ products[randomNum].title }}</h3>
+                    <span><a href = "/room/{{products[randomNum].slug}}">Book now</a><img class='details-arrow' src='../../images/details-arrow.svg'></span>
+                    <p class = "apt-price">{{ products[randomNum].formatted_price }}</p>
+                </div>
+            </div>
+        </div>
+</aside>

@@ -117,3 +117,71 @@
                 font-size: 16px
                 line-height: 18px
                 color: #B2B2B2
+
+.recommendations
+    margin-top: 60px
+
+    h1
+        font-family: Arial
+        font-style: normal
+        font-weight: bold
+        font-size: 36px
+        line-height: 41px
+        color: $text-color
+        margin-bottom: 10px
+
+    .recommended-apts
+        display: flex
+        gap: 41px
+
+        .apartment
+            margin-top: 30px
+            position: relative
+            width: 200px
+            height: 196px
+
+            a
+                text-decoration: none
+                color: $gold
+
+            .apt-img
+                width: 100%
+                height: 144px
+
+            .apt-text
+                height: 52px
+                background-color: #F2F2F2
+                padding-left: 10px
+                margin-top: -5px
+
+                h3   
+                    font-family: Arial
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 16px
+                    line-height: 25px
+                    color: $text-color
+                    padding-top: 3px
+                    margin-bottom: 0
+
+                span
+                    +view-details
+                    margin-top: 0 !important
+                    font-size: 12px
+                    gap: 10px
+
+                    img
+                        margin-top: 9px
+                        width: 4.5px
+                        height: 7.3px
+
+                .apt-price
+                    position: absolute
+                    bottom: 7px
+                    right: 10px
+                    font-family: Arial
+                    font-style: normal
+                    font-weight: bold
+                    font-size: 12px
+                    line-height: 31px
+                    color: $text-color

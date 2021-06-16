@@ -9,6 +9,7 @@ use Laminas\Diactoros\ServerRequest;
 class ProductController extends BaseController
 {
     public function show(ServerRequest $request, $productSlug) {
+        $products = json_decode(file_get_contents(dirname(__DIR__).'/home_products.json'));
         $slug = $request->getAttribute('slug');
         $product = $this->getProductBySlug($slug);
 
@@ -19,6 +20,7 @@ class ProductController extends BaseController
 
         return $this->render('product.html.twig', [
             'product' => $product,
+            'products' => $products
         ]);
     }
 
