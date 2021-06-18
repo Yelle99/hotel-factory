@@ -1,7 +1,7 @@
 <section class = "best-apartments">
     <h1>Best Apartments</h1> 
     <div class = "apartments-list">
-        {%for product in products%}
+        {% for product in products %}
             <div class="best-apartment">
                 <img class = "best-apartment--image" src = '{{product.images[0].url}}'/>
                 <div class = "best-apartment--text">
@@ -10,6 +10,6 @@
                     <p class = "best-apartment--price">{{ product.formatted_price }}</p>
                 </div>
             </div>
-        {%endfor%} 
+        {% endfor %} 
     </div>             
 </section>

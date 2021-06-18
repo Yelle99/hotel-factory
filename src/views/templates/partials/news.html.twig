@@ -1,0 +1,22 @@
+<section class = "news">
+    <h1>Recent news</h1>
+    <div class = "news-slider">
+        {%for singleNews in news%}
+            <div class = "single-news">
+                <img class = "news-slider--image" src = '{{singleNews.image}}'/>
+                <div class = "promo-price">
+                    <img src = '../../images/tag-cash.svg'/>
+                    <div class = "promo-text">
+                        <h4>Promo price!</h4>
+                        <p>August 25-31</p>
+                    </div>
+                </div>
+                <p class = "category">{{singleNews.category}}</p>
+                <h3 class = "title">{{singleNews.title}}</h3>
+                <p class = "description">{{singleNews.description}}</p>
+                <span>Learn more<img class='details-arrow' src='../../images/details-arrow.svg'></span>
+            </div>
+        {%endfor%}
+    </div>
+    <div class = "beige-bg"></div>
+</section>

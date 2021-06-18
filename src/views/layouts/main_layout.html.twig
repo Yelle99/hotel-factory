@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% block page_title %}{% endblock %}</title>
+    <title>{% block page_title %}Hotel{% endblock %}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
-    {% block headScripts %}{% endblock %}
+    {% block headScripts %}
+    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    {% endblock %}
 </head>
 <body>
 
@@ -13,8 +18,36 @@
 
     {% block content %}{% endblock %}
 
-    {% block footer %}{% endblock %}
+    {% block footer %}
+        {% include "partials/footer.html.twig" %}
+    {% endblock %}
+
+    {% set reservedDates = [] %}
+
+    {% for dates in product.reserved_dates %}    
+        {% set reservedDates = reservedDates|merge([dates.date]) %}
+    {% endfor %}
+
 
     <script src="/assets/js/app.js"></script>
-    {% block footerScripts %}{% endblock %}
+    {% block footerScripts %}
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="/slick/slick/slick.min.js"></script>
+        <script src="/js/slick-init.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="/js/slick-init.js"></script>
+        <script src="/js/buttons.js"></script>
+        <script>
+            var datesArray = {{ reservedDates|json_encode|raw }};
+            $("#calendarFrom").flatpickr( {
+                dateFormat: "Y-m-d",
+                disable: datesArray
+            });
+            $("#calendarTo").flatpickr( {
+                dateFormat: "Y-m-d",
+                disable: datesArray
+            });
+        </script>
+    {% endblock %}
 </body>

@@ -45,15 +45,3 @@ $response = $requestHandler->handle(ServerRequestFactory::fromGlobals());
 
 $emitter = new SapiEmitter();
 $emitter->emit($response);
-
-
-// // Read JSON file
-// $json = file_get_contents(__DIR__ . '/../src/home_products.json');
-
-// //Decode JSON
-// $json_data = json_decode($json,true);
-// // print_r($json_data);
-
-// $loader = new FilesystemLoader($layoutDir);
-// $twig = new Environment($loader);
-// echo $twig->render('main_layout.html.twig', ['sobe' => $json_data]);

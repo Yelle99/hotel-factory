@@ -5,7 +5,7 @@
     background-color: #F0ECE7
     padding: 30px 27px 30px 33px
 
-    button
+    .check-btn
         +button
         margin-left: 49px
 
@@ -84,6 +84,7 @@
             border: 1px solid #D0D0D0
             border-radius: 4px
             display: flex
+            position: relative
 
             .guest-img
                 padding: 7px 15px
@@ -99,7 +100,7 @@
                 border: none
                 border-radius: 4px
                 padding-right: 4px
-                padding-left: 4px
+                padding-left: 5px
                 font-family: Cabin
                 font-style: normal
                 font-weight: bold
@@ -117,6 +118,22 @@
                 font-size: 16px
                 line-height: 18px
                 color: #B2B2B2
+
+            .plus-minus
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                position: absolute
+                right: 8px
+                top: 4px
+
+                .guests-btn
+                    border: none
+                    background-color: transparent 
+                    font-weight: bold
+                    cursor: pointer
+                
 
 .recommendations
     margin-top: 60px

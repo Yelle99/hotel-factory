@@ -1,23 +1,19 @@
-<!-- TWIG home page -->
-<!-- https://twig.symfony.com/doc/3.x/ -->
+{% extends '/main_layout.html.twig' %}
 
+{% block header %}
+    {% include "partials/header.html.twig" %}
+{% endblock %}
 
+{% block content %}
+    {% include "partials/hero-section.html.twig" %}
+    <div class = "container">
+        {% include "partials/main-intro.html.twig" %}
+        {% include "partials/best-apartments.html.twig" %}      
+    </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Hotel</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
-</head>
-<body>
-    {% include "/header.html.twig" %}
-    {% include "/hero-section.html.twig" %}
-    {% include "/main-content.html.twig" %}
-    {% include "/footer.html.twig" %}
+    {% include "partials/services.html.twig" %}
+    {% include "partials/news.html.twig" %}
+    {% include "partials/features.html.twig" %}
+    {% include "partials/reviews.html.twig" %}
 
-    <script src="/js/slick-init.js"></script>
-</body>
+{% endblock %}
