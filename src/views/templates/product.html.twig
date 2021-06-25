@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class = "product-container">
+    <div class = "product-container" id="product">
         <div class = "slider-for">
             <img class = "product-image" src = '{{product.images[0].url}}'/>
             <img class = "product-image" src = '{{product.images[1].url}}'/>
@@ -26,8 +26,13 @@
             <div class = "main-content">
                 {% include "partials/product-description.html.twig" %}
             </div>
+            
+            {% set reservedDates = [] %}
+            {% for dates in product.reserved_dates %}    
+                {% set reservedDates = reservedDates|merge([dates.date]) %}
+            {% endfor %}
 
-            <div class = "side-content">
+            <div id ="side" class = "side-content" data-dates={{ reservedDates|json_encode|raw }}>
                 {% include "partials/side-content.html.twig" %}
             </div>
         </section>

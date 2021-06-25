@@ -5,15 +5,16 @@
 {% endblock %}
 
 {% block content %}
-    {% include "partials/hero-section.html.twig" %}
-    <div class = "container">
-        {% include "partials/main-intro.html.twig" %}
-        {% include "partials/best-apartments.html.twig" %}      
+    <div id = "home">
+        {% include "partials/hero-section.html.twig" %}
+        <div class = "container">
+            {% include "partials/main-intro.html.twig" %}
+            {% include "partials/best-apartments.html.twig" %}      
+        </div>
+
+        {% include "partials/services.html.twig" %}
+        {% include "partials/news.html.twig" %}
+        {% include "partials/features.html.twig" %}
+        {% include "partials/reviews.html.twig" %}
     </div>
-
-    {% include "partials/services.html.twig" %}
-    {% include "partials/news.html.twig" %}
-    {% include "partials/features.html.twig" %}
-    {% include "partials/reviews.html.twig" %}
-
 {% endblock %}

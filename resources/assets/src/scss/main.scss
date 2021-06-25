@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1404px;
+  margin: 0 auto;
+}
+
+@import "mixins";
+@import "variables";
+@import "primary-nav";
+@import "secondary-nav";
+@import "hero-section";
+@import "main-intro";
+@import "best-apartments";
+@import "services";
+@import "news";
+@import "features";
+@import "reviews";
+@import "footer";
+@import "header-product";
+@import "product";
+@import "product-description";
+@import "comments";
+@import "side-content";

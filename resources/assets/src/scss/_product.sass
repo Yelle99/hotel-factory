@@ -7,6 +7,7 @@
         height: 500px
         object-fit: cover
         margin-bottom: 30px
+        z-index: -1 !important
 
     .product-image--nav
         width: 260px !important
@@ -17,9 +18,6 @@
     .slider-nav
         position: relative
 
-        // .slick-slide
-        //     margin: 0 15px
-
         .prev-arrow--news
             width: 7.5px
             height: 12px
@@ -27,7 +25,7 @@
             position: absolute
             left: 0px
             top: 80px
-            z-index: 999
+            z-index: 998
         
         .next-arrow--news
             width: 7.5px
@@ -36,7 +34,7 @@
             position: absolute
             right: 0px
             top: 80px
-            z-index: 999
+            z-index: 998
 
         .slick-current
             border: 3px solid $gold

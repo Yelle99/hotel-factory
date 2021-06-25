@@ -1,8 +1,16 @@
 .hero-section 
   width: 100%
   height: 919px
-  background-image: url(../../images/hero-image.png)
   overflow: hidden
+
+  .hero-img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 919px 
+      overflow: hidden
+      z-index: -1
 
   .hero-text 
     width: 100%
@@ -60,7 +68,8 @@
     position: absolute
     top: -450px
     left: 600px
-
+    max-width: 1520px !important
+        
     .slider-room--image
         width: 441px
         height: 233px
